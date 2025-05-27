@@ -1,23 +1,47 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+/* Material UI-like color palette */
+:root {
+  --primary: #1976d2;
+  --primary-light: #63a4ff;
+  --primary-dark: #004ba0;
+  --secondary: #9c27b0;
+  --secondary-light: #d05ce3;
+  --secondary-dark: #6a0080;
+  --error: #d32f2f;
+  --success: #388e3c;
+  --warning: #fbc02d;
+  --info: #0288d1;
+  --surface: #fff;
+  --background: #f5f7fa;
+  --border-radius: 12px;
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
-  font-family: "Roboto", Arial, sans-serif;
-  background: #f5f5f5;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: linear-gradient(135deg, #e3e8f7 0%, #ffffff 50%, #e3f2fd 100%);
   margin: 0;
   padding: 0;
 }
+
 .container {
   max-width: 900px;
   margin: 40px auto;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08), 0 6px 24px rgba(25, 118, 210, 0.04);
   padding: 40px 32px;
 }
+
 .profile {
   display: flex;
   align-items: center;
   gap: 32px;
   margin-bottom: 32px;
 }
+
 .profile-img {
   width: 100px;
   height: 100px;
@@ -25,6 +49,7 @@ body {
   object-fit: cover;
   display: block;
 }
+
 .avatar {
   width: 100px;
   height: 100px;
@@ -37,18 +62,22 @@ body {
   font-size: 48px;
   font-weight: 500;
 }
+
 .profile-info h2 {
   margin: 0 0 8px 0;
   font-weight: 500;
   color: #1976d2;
 }
+
 .profile-info p {
   margin: 0;
   color: #555;
 }
+
 .section {
   margin-bottom: 36px;
 }
+
 .section-title {
   font-size: 1.2rem;
   color: #1976d2;
@@ -57,7 +86,9 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  letter-spacing: 0.01em;
 }
+
 .chip {
   display: inline-block;
   background: #e3f2fd;
@@ -66,30 +97,46 @@ body {
   padding: 4px 12px;
   font-size: 0.95rem;
   margin: 2px 6px 2px 0;
+  border: 1px solid #bbdefb;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background var(--transition), color var(--transition);
 }
+
+.chip:hover {
+  background: #bbdefb;
+  color: var(--primary-dark);
+}
+
 .section .chip {
   margin-bottom: 4px;
 }
+
 .project-card {
   background: #fafafa;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08), 0 6px 24px rgba(25, 118, 210, 0.04);
   padding: 20px 18px;
   margin-bottom: 18px;
-  transition: box-shadow 0.2s;
+  transition: box-shadow var(--transition), background var(--transition);
 }
+
 .project-card:hover {
-  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.12);
+  box-shadow: 0 8px 24px rgba(25, 118, 210, 0.16);
+  background: #f0f7ff;
 }
+
 .project-title {
   font-weight: 500;
   color: #1976d2;
   margin-bottom: 6px;
 }
+
 .project-desc {
   color: #444;
   margin-bottom: 4px;
 }
+
 .project-link {
   color: #1976d2;
   text-decoration: none;
@@ -101,16 +148,19 @@ body {
   box-shadow: none;
   outline: none;
 }
+
 .project-link:focus {
   box-shadow: 0 0 0 2px #90caf9;
   background: #e3f2fd;
 }
+
 .project-link:hover {
   text-decoration: underline;
   background: #e3f2fd;
   color: #0d47a1;
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
 }
+
 a {
   color: #1976d2;
   text-decoration: none;
@@ -122,16 +172,19 @@ a {
   outline: none;
   position: relative;
 }
+
 a:focus {
   box-shadow: 0 0 0 2px #90caf9;
   background: #e3f2fd;
 }
+
 a:hover {
   background: #e3f2fd;
   color: #0d47a1;
   text-decoration: underline;
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
 }
+
 .category-title {
   color: #1976d2;
   font-size: 1.05em;
@@ -139,6 +192,114 @@ a:hover {
   margin-bottom: 4px;
   display: inline-block;
 }
+
 .tech-category {
   margin-bottom: 18px;
+}
+
+/* Material UI Elevation */
+.elevation-1 {
+  box-shadow: 0 1px 3px rgba(60, 60, 60, 0.12), 0 1px 2px rgba(60, 60, 60, 0.24);
+}
+.elevation-2 {
+  box-shadow: 0 3px 6px rgba(60, 60, 60, 0.16), 0 3px 6px rgba(60, 60, 60, 0.23);
+}
+.elevation-3 {
+  box-shadow: 0 10px 20px rgba(60, 60, 60, 0.19), 0 6px 6px rgba(60, 60, 60, 0.23);
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(25, 118, 210, 0.08);
+  transition: background var(--transition), box-shadow var(--transition), color var(--transition);
+  outline: none;
+}
+
+.button:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.16);
+}
+
+.button:focus {
+  background: var(--primary-light);
+  box-shadow: 0 0 0 3px #90caf9;
+}
+
+.button.secondary {
+  background: var(--secondary);
+}
+
+.button.secondary:hover {
+  background: var(--secondary-dark);
+}
+
+.button.secondary:focus {
+  background: var(--secondary-light);
+}
+
+.button.outlined {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.button.outlined:hover {
+  background: #e3f2fd;
+}
+
+.button.outlined.secondary {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.button.outlined.secondary:hover {
+  background: #f3e5f5;
+}
+
+/* General focus style for accessibility */
+:focus-visible {
+  outline: 2px solid #90caf9;
+  outline-offset: 2px;
+}
+
+/* Utility spacing classes */
+.mt-2 {
+  margin-top: 16px;
+}
+.mb-2 {
+  margin-bottom: 16px;
+}
+.mt-4 {
+  margin-top: 32px;
+}
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+/* Input field (Material-like) */
+.input {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: border var(--transition), box-shadow var(--transition);
+  margin-bottom: 16px;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px #90caf9;
+  background: #fff;
 }
