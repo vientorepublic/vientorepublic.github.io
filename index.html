@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   </head>
   <body>
     <div class="container">
@@ -21,7 +22,7 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-title"><span class="material-icons">star</span>기술 스택</div>
+        <div class="section-title"><span class="fa-solid fa-star"></span>기술 스택</div>
         <div class="tech-category">
           <strong class="category-title">언어</strong><br />
           <span class="chip">TypeScript</span>
@@ -53,17 +54,20 @@
         </div>
       </div>
       <div class="section">
-        <div class="section-title"><span class="material-icons">work</span>프로젝트</div>
+        <div class="section-title"><span class="fa-solid fa-briefcase"></span>프로젝트</div>
+        <div class="project-card">
+          <div class="project-title">Hayang</div>
+          <div class="project-desc">디스코드 서버를 더 안전하고 효율적으로 관리하는 스마트한 관리 어시스턴트</div>
+          <a class="project-link" href="https://hayang.viento.me" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 4px"></i>
+            프로젝트로 이동
+          </a>
+        </div>
         <div class="project-card">
           <div class="project-title">Safe Share</div>
           <div class="project-desc">브라우저에서 종단간 암호화(E2EE)를 지원하는 안전한 익명 파일 공유 플랫폼</div>
           <a class="project-link" href="https://github.com/vientorepublic/safe-share" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 4px">
-              <path
-                fill="#1976d2"
-                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
-              />
-            </svg>
+            <i class="fab fa-github" style="margin-right: 4px"></i>
             GitHub 보기
           </a>
         </div>
@@ -71,38 +75,75 @@
           <div class="project-title">melona</div>
           <div class="project-desc">멜론 음원 서비스 스크래핑 Node.js 라이브러리</div>
           <a class="project-link" href="https://github.com/vientorepublic/melona" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 4px">
-              <path
-                fill="#1976d2"
-                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
-              />
-            </svg>
+            <i class="fab fa-github" style="margin-right: 4px"></i>
             GitHub 보기
+          </a>
+          <a class="project-link" href="https://www.npmjs.com/package/melona" target="_blank" style="margin-left: 8px">
+            <i class="fa-brands fa-npm" style="margin-right: 4px; color: #cb3837"></i>
+            NPM 보기
           </a>
         </div>
         <div class="project-card">
-          <div class="project-title">pal-webhook</div>
-          <div class="project-desc">국회 입법예고(pal.assembly.go.kr) 진행 중인 입법예고 목록의 변경 내용을 감시하고 알림을 보내는 디스코드 웹훅</div>
-          <a class="project-link" href="https://github.com/vientorepublic/pal-webhook" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 4px">
-              <path
-                fill="#1976d2"
-                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
-              />
-            </svg>
+          <div class="project-title">pal-crawl</div>
+          <div class="project-desc">국회입법예고(pal.assembly.go.kr)의 진행 중인 입법 예고 크롤러</div>
+          <a class="project-link" href="https://github.com/vientorepublic/pal-crawl" target="_blank">
+            <i class="fab fa-github" style="margin-right: 4px"></i>
             GitHub 보기
+          </a>
+          <a class="project-link" href="https://www.npmjs.com/package/pal-crawl" target="_blank" style="margin-left: 8px">
+            <i class="fa-brands fa-npm" style="margin-right: 4px; color: #cb3837"></i>
+            NPM 보기
+          </a>
+        </div>
+        <div class="project-card">
+          <div class="project-title">remote-env</div>
+          <div class="project-desc">Remote dotenv server/client for Node.js</div>
+          <a class="project-link" href="https://github.com/vientorepublic/remote-env" target="_blank">
+            <i class="fab fa-github" style="margin-right: 4px"></i>
+            GitHub 보기
+          </a>
+          <a class="project-link" href="https://www.npmjs.com/package/@vientorepublic/remote-env" target="_blank" style="margin-left: 8px">
+            <i class="fa-brands fa-npm" style="margin-right: 4px; color: #cb3837"></i>
+            NPM 보기
           </a>
         </div>
         <div class="project-card">
           <div class="project-title">diary</div>
           <div class="project-desc">마크다운 문법을 지원하는 심플한 웹 게시판</div>
           <a class="project-link" href="https://github.com/vientorepublic/diary" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 4px">
-              <path
-                fill="#1976d2"
-                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
-              />
-            </svg>
+            <i class="fab fa-github" style="margin-right: 4px"></i>
+            GitHub 보기
+          </a>
+        </div>
+        <div class="project-card">
+          <div class="project-title">catsoup</div>
+          <div class="project-desc">프로그래밍 실습 과제 - 야옹이와 수프</div>
+          <a class="project-link" href="https://github.com/vientorepublic/catsoup" target="_blank">
+            <i class="fab fa-github" style="margin-right: 4px"></i>
+            GitHub 보기
+          </a>
+        </div>
+        <div class="project-card">
+          <div class="project-title">partyparrot</div>
+          <div class="project-desc">Bringing party parrot to terminals</div>
+          <a class="project-link" href="https://github.com/vientorepublic/partyparrot" target="_blank">
+            <i class="fab fa-github" style="margin-right: 4px"></i>
+            GitHub 보기
+          </a>
+        </div>
+        <div class="project-card">
+          <div class="project-title">parrot.live</div>
+          <div class="project-desc">Bringing animated parrots to terminals everywhere</div>
+          <a class="project-link" href="https://github.com/vientorepublic/parrot.live" target="_blank">
+            <i class="fab fa-github" style="margin-right: 4px"></i>
+            GitHub 보기
+          </a>
+        </div>
+        <div class="project-card">
+          <div class="project-title">multiflex</div>
+          <div class="project-desc">NestJS file upload/download server implementation example</div>
+          <a class="project-link" href="https://github.com/vientorepublic/multiflex" target="_blank">
+            <i class="fab fa-github" style="margin-right: 4px"></i>
             GitHub 보기
           </a>
         </div>
@@ -110,24 +151,24 @@
           <div class="project-title">algorithm</div>
           <div class="project-desc">알고리즘과 메모리 보안 관련 취약점을 연구하고 기록하는 리포지토리</div>
           <a class="project-link" href="https://github.com/vientorepublic/algorithm" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 4px">
-              <path
-                fill="#1976d2"
-                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.48 2.87 8.28 6.84 9.63.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
-              />
-            </svg>
+            <i class="fab fa-github" style="margin-right: 4px"></i>
             GitHub 보기
           </a>
         </div>
       </div>
       <div class="section">
-        <div class="section-title"><span class="material-icons">school</span>학력</div>
+        <div class="section-title"><span class="fa-solid fa-graduation-cap"></span>학력</div>
         <p>한남대학교 컴퓨터공학과 재학중</p>
       </div>
       <div class="section">
-        <div class="section-title"><span class="material-icons">email</span>연락처</div>
+        <div class="section-title"><span class="fa-solid fa-envelope"></span>연락처</div>
         <p>이메일: <a href="mailto:op@viento.me">op@viento.me</a></p>
-        <p>GitHub: <a class="project-link" href="https://github.com/vientorepublic" target="_blank">vientorepublic</a></p>
+        <p>
+          GitHub:
+          <a class="project-link" href="https://github.com/vientorepublic" target="_blank"
+            ><i class="fab fa-github" style="margin-right: 4px"></i>vientorepublic</a
+          >
+        </p>
       </div>
     </div>
   </body>
