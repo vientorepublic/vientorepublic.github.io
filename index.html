@@ -1,175 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vientorepublic</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="VientoFactory 소개 페이지" />
+    <meta property="og:title" content="VientoFactory" />
+    <meta property="og:description" content="VientoFactory - We make everything!" />
+    <meta property="og:url" content="https://viento.me" />
+    <title>VientoFactory</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="profile">
-        <div class="avatar" style="background: none; padding: 0">
-          <img class="profile-img" src="https://avatars.githubusercontent.com/u/107330816" alt="프로필 사진" />
-        </div>
-        <div class="profile-info">
-          <h2>Viento <span style="font-size: 1rem; color: #888">(김도연)</span></h2>
-          <p>학생 개발자</p>
-          <p>풀스택 웹 개발, 디지털 보안 & 프라이버시, 클라우드, DevOps</p>
-        </div>
+    <a href="#content" class="skip-link">본문으로 건너뛰기</a>
+    <header class="site-hero" role="banner">
+      <div class="hero-inner">
+        <h1 class="hero-title">VientoFactory</h1>
+        <p class="hero-subtitle">We make everything!</p>
+        <a class="hero-cta" href="#content">팀 소개 보기</a>
       </div>
-      <div class="section">
-        <div class="section-title"><span class="fa-solid fa-star"></span>기술 스택</div>
-        <div class="tech-category">
-          <strong class="category-title">언어</strong><br />
-          <span class="chip">TypeScript</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">C/C++</span>
-          <span class="chip">Java/Kotlin</span>
+    </header>
+
+    <main id="content" role="main">
+      <section class="content-intro" aria-labelledby="about-title">
+        <div class="section-inner">
+          <h2 id="about-title" class="section-title">About Us</h2>
+          <p class="section-lead">VientoFactory는 다양한 분야의 전문가들이 모여 혁신적 아이디어와 기술로 새로운 가치를 만듭니다.</p>
         </div>
-        <div class="tech-category">
-          <strong class="category-title">프레임워크</strong><br />
-          <span class="chip">React</span>
-          <span class="chip">NextJS</span>
-          <span class="chip">Vue.js</span>
-          <span class="chip">NuxtJS</span>
-          <span class="chip">NestJS</span>
-          <span class="chip">Springboot</span>
+      </section>
+
+      <section class="content-features" aria-labelledby="features-title">
+        <div class="section-inner">
+          <h2 id="features-title" class="section-title">What We Do</h2>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-emoji" aria-hidden="true"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
+              <h3 class="feature-title">빠른 실험과 실행</h3>
+              <p class="feature-text">아이디어를 빠르게 프로토타이핑하고 시장 피드백을 기반으로 개선합니다.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-emoji" aria-hidden="true"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+              <h3 class="feature-title">협업 중심 문화</h3>
+              <p class="feature-text">분야를 넘나드는 협업으로 더 큰 가치를 만듭니다.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-emoji" aria-hidden="true"><i class="fa-solid fa-compass" aria-hidden="true"></i></div>
+              <h3 class="feature-title">문제 해결 지향</h3>
+              <p class="feature-text">사용자 문제를 명확히 정의하고, 단순하고 우아한 해법을 찾습니다.</p>
+            </article>
+          </div>
         </div>
-        <div class="tech-category">
-          <strong class="category-title">DevOps & 기타</strong><br />
-          <span class="chip">Docker</span>
-          <span class="chip">MySQL</span>
-          <span class="chip">MongoDB</span>
-          <span class="chip">GitHub Actions</span>
-          <span class="chip">Jenkins</span>
-          <span class="chip">AWS</span>
-          <span class="chip">Linux</span>
-          <span class="chip">Nginx</span>
+      </section>
+
+      <section class="content-projects" aria-labelledby="projects-title">
+        <div class="section-inner">
+          <h2 id="projects-title" class="section-title">Projects</h2>
+          <p class="section-lead">우리가 만들어 온 제품과 시도를 소개합니다.</p>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-media" aria-hidden="true">
+                <img src="https://hayang.viento.me/background/hayang_landing_1.png" alt="" />
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Hayang</h3>
+                <p class="project-text">디스코드 서버를 더 안전하고 효율적으로 관리하는 스마트한 관리 어시스턴트</p>
+                <div class="project-actions">
+                  <a href="https://hayang.viento.me/" class="link">Homepage</a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <section class="content-contact" aria-labelledby="contact-title">
+        <div class="section-inner">
+          <h2 id="contact-title" class="section-title">Contact</h2>
+          <p class="section-lead">협업 제안, 문의, 피드백 모두 환영합니다.</p>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3 class="contact-title"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</h3>
+              <p class="contact-text">문의는 이메일로 보내주세요. 최대한 빠르게 답변드리겠습니다.</p>
+              <a class="link" href="mailto:hello@viento.me">op@viento.me</a>
+            </article>
+            <article class="contact-card">
+              <h3 class="contact-title"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</h3>
+              <p class="contact-text">이슈 등록이나 PR로 기여하실 수 있습니다.</p>
+              <a class="link" href="https://github.com/vientofactory" target="_blank" rel="noopener noreferrer">@vientofactory</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-brand">VientoFactory</div>
+        <p class="footer-copy">Designed by <a href="https://github.com/vientorepublic" class="footer-link">Vientorepublic</a></p>
       </div>
-      <div class="section">
-        <div class="section-title"><span class="fa-solid fa-briefcase"></span>프로젝트</div>
-        <div class="project-card">
-          <div class="project-title">Hayang</div>
-          <div class="project-desc">디스코드 서버를 더 안전하고 효율적으로 관리하는 스마트한 관리 어시스턴트</div>
-          <a class="project-link" href="https://hayang.viento.me" target="_blank">
-            <i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 4px"></i>
-            프로젝트로 이동
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">Safe Share</div>
-          <div class="project-desc">브라우저에서 종단간 암호화(E2EE)를 지원하는 안전한 익명 파일 공유 플랫폼</div>
-          <a class="project-link" href="https://github.com/vientorepublic/safe-share" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">melona</div>
-          <div class="project-desc">멜론 음원 서비스 스크래핑 Node.js 라이브러리</div>
-          <a class="project-link" href="https://github.com/vientorepublic/melona" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-          <a class="project-link" href="https://www.npmjs.com/package/melona" target="_blank" style="margin-left: 8px">
-            <i class="fa-brands fa-npm" style="margin-right: 4px; color: #cb3837"></i>
-            NPM 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">pal-crawl</div>
-          <div class="project-desc">국회입법예고(pal.assembly.go.kr)의 진행 중인 입법 예고 크롤러</div>
-          <a class="project-link" href="https://github.com/vientorepublic/pal-crawl" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-          <a class="project-link" href="https://www.npmjs.com/package/pal-crawl" target="_blank" style="margin-left: 8px">
-            <i class="fa-brands fa-npm" style="margin-right: 4px; color: #cb3837"></i>
-            NPM 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">remote-env</div>
-          <div class="project-desc">Remote dotenv server/client for Node.js</div>
-          <a class="project-link" href="https://github.com/vientorepublic/remote-env" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-          <a class="project-link" href="https://www.npmjs.com/package/@vientorepublic/remote-env" target="_blank" style="margin-left: 8px">
-            <i class="fa-brands fa-npm" style="margin-right: 4px; color: #cb3837"></i>
-            NPM 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">diary</div>
-          <div class="project-desc">마크다운 문법을 지원하는 심플한 웹 게시판</div>
-          <a class="project-link" href="https://github.com/vientorepublic/diary" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">catsoup</div>
-          <div class="project-desc">프로그래밍 실습 과제 - 야옹이와 수프</div>
-          <a class="project-link" href="https://github.com/vientorepublic/catsoup" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">partyparrot</div>
-          <div class="project-desc">Bringing party parrot to terminals</div>
-          <a class="project-link" href="https://github.com/vientorepublic/partyparrot" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">parrot.live</div>
-          <div class="project-desc">Bringing animated parrots to terminals everywhere</div>
-          <a class="project-link" href="https://github.com/vientorepublic/parrot.live" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">multiflex</div>
-          <div class="project-desc">NestJS file upload/download server implementation example</div>
-          <a class="project-link" href="https://github.com/vientorepublic/multiflex" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-        </div>
-        <div class="project-card">
-          <div class="project-title">algorithm</div>
-          <div class="project-desc">알고리즘과 메모리 보안 관련 취약점을 연구하고 기록하는 리포지토리</div>
-          <a class="project-link" href="https://github.com/vientorepublic/algorithm" target="_blank">
-            <i class="fab fa-github" style="margin-right: 4px"></i>
-            GitHub 보기
-          </a>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-title"><span class="fa-solid fa-graduation-cap"></span>학력</div>
-        <p>한남대학교 컴퓨터공학과 재학중</p>
-      </div>
-      <div class="section">
-        <div class="section-title"><span class="fa-solid fa-envelope"></span>연락처</div>
-        <p>이메일: <a href="mailto:op@viento.me">op@viento.me</a></p>
-        <p>
-          GitHub:
-          <a class="project-link" href="https://github.com/vientorepublic" target="_blank"
-            ><i class="fab fa-github" style="margin-right: 4px"></i>vientorepublic</a
-          >
-        </p>
-      </div>
-    </div>
+    </footer>
   </body>
 </html>

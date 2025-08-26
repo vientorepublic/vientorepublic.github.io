@@ -1,31 +1,3 @@
-# Portfolio
+# VientoFactory
 
-과제 제출용 포트폴리오 깃허브 페이지
-
-깃허브 페이지 링크: [https://vientorepublic.github.io](https://vientorepublic.github.io)
-
-## 구현 상세
-
-### 디자인 패턴
-
-- **카드 레이아웃(Card Layout)**: 프로젝트, 기술 스택 등 주요 정보는 카드 형태(`.project-card`, `.chip`)로 시각적으로 구분하여 가독성과 정보 탐색성을 높였습니다.
-- **섹션 분리(Sectioned Layout)**: 각 정보(프로필, 기술, 프로젝트, 학력, 연락처)는 `.section` 클래스를 통해 명확히 구분되어 있습니다.
-- **머티리얼 디자인(Material Design) 요소**: Google Fonts의 Roboto, Material Icons, 그리고 파란색 계열의 포인트 컬러(#1976d2, #e3f2fd 등)를 사용해 현대적이고 일관된 UI를 구현했습니다.
-- **반응형(Responsive) 레이아웃**: `max-width`, `margin: auto`, `padding` 등으로 다양한 화면 크기에서 중앙 정렬 및 적절한 여백을 유지합니다.
-
-### CSS 구현 포인트
-
-- **폰트와 컬러**: Roboto 폰트와 파란색 계열의 포인트 컬러로 전문적이고 신뢰감 있는 분위기를 연출합니다.
-- **카드/칩 스타일**: `.project-card`, `.chip` 등은 그림자와 라운드 처리로 부드럽고 현대적인 느낌을 줍니다.
-- **호버/포커스 효과**: 링크와 카드에 호버 및 포커스 효과를 적용해 접근성과 인터랙션을 강화했습니다.
-- **아이콘 활용**: Material Icons를 활용해 각 섹션의 의미를 직관적으로 전달합니다.
-
-### 기타 설명
-
-- **접근성**: 링크에 `:focus` 스타일을 추가하여 키보드 네비게이션 사용자를 배려했습니다.
-- **이미지 최적화**: 프로필 이미지는 원형(`border-radius: 50%`) 및 `object-fit: cover`로 깔끔하게 표시됩니다.
-- **코드 구조**: HTML은 시맨틱 구조를 따르며, CSS는 클래스 기반으로 재사용성과 유지보수성을 높였습니다.
-
----
-
-본 포트폴리오 페이지는 심플하면서도 현대적인 UI/UX를 지향하며, 웹 표준과 접근성을 고려해 작성되었습니다.
+Organization introduction page
