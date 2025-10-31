@@ -2,30 +2,32 @@
 body {
   margin: 0;
   padding: 20px;
-  font-family: "Courier New", "Monaco", "Consolas", monospace;
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #00ff00;
-  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #00ff88;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #0d0d0d);
   min-height: 100vh;
 }
 
 .terminal-window {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 12px 12px 0 0;
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .terminal-header {
-  background: linear-gradient(to right, #333, #555);
-  color: #fff;
-  padding: 10px 15px;
+  background: linear-gradient(to right, #2d2d2d, #4a4a4a, #2d2d2d);
+  color: #ffffff;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .terminal-title {
@@ -57,22 +59,22 @@ body {
 }
 
 .terminal {
-  background: linear-gradient(to bottom, #000000, #111111);
-  color: #00ff00;
-  padding: 20px;
-  border-radius: 0 0 10px 10px;
-  box-shadow: inset 0 0 30px rgba(0, 255, 0, 0.05);
-  border: 1px solid #333;
+  background: linear-gradient(to bottom, #000000, #0a0a0a, #000000);
+  color: #00ff88;
+  padding: 24px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: inset 0 0 40px rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-top: none;
   position: relative;
 }
 
 .line {
-  margin: 8px 0;
-  white-space: pre-wrap;
+  margin: 6px 0;
+  white-space: pre-line;
   word-wrap: break-word;
   opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
 .line:nth-child(1) {
@@ -139,7 +141,7 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -148,50 +150,54 @@ body {
 }
 
 .prompt {
-  color: #00ff00;
+  color: #00ff88;
   font-weight: bold;
 }
 
 .line.command {
-  color: #00ff00;
   font-weight: bold;
 }
 
-.line.output {
+.command-text {
   color: #ffffff;
 }
 
+.line.output {
+  color: #e0e0e0;
+}
+
 a {
-  color: #0080ff;
+  color: #4fc3f7;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: #0056b3;
-  border-bottom-color: #0056b3;
-  text-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+  color: #29b6f6;
+  border-bottom-color: #29b6f6;
+  text-shadow: 0 0 8px rgba(79, 195, 247, 0.6);
 }
 
 /* Cursor effect */
 .terminal::after {
-  content: "|";
+  content: "_";
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  color: #00ff00;
+  bottom: 24px;
+  right: 24px;
+  color: #00ff88;
   font-family: inherit;
   font-size: inherit;
-  animation: blink 1s infinite;
+  font-weight: bold;
+  animation: blink 0.8s infinite;
 }
 
 @keyframes blink {
   0%,
-  50% {
+  40% {
     opacity: 1;
   }
-  51%,
+  41%,
   100% {
     opacity: 0;
   }
