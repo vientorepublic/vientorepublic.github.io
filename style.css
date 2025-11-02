@@ -107,7 +107,11 @@ body {
   position: relative;
   min-height: 600px;
   overflow-y: auto;
+  overflow-x: hidden;
   max-height: 80vh;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  scroll-padding-bottom: 100px;
 }
 
 @media (max-width: 768px) {
@@ -116,6 +120,8 @@ body {
     min-height: 400px;
     max-height: 70vh;
     border-radius: 0 0 8px 8px;
+    scroll-padding-top: 60px;
+    scroll-padding-bottom: 80px;
   }
 }
 
@@ -180,7 +186,8 @@ body {
 .line.output {
   color: #e0e0e0;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(15px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line.output.show {
