@@ -77,6 +77,7 @@ body {
   animation: fadeIn 0.6s ease-out forwards;
 }
 
+/* Terminal output delays */
 .line:nth-child(1) {
   animation-delay: 0s;
 }
@@ -136,6 +137,9 @@ body {
 }
 .line:nth-child(20) {
   animation-delay: 3.8s;
+}
+.line:nth-child(21) {
+  animation-delay: 4s;
 }
 
 @keyframes fadeIn {
