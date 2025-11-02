@@ -13,45 +13,214 @@
   <body>
     <div class="terminal-window">
       <div class="terminal-header">
-        <span class="terminal-title">viento@vientofactory: ~</span>
         <div class="window-controls">
+          <span class="control close"></span>
           <span class="control minimize"></span>
           <span class="control maximize"></span>
-          <span class="control close"></span>
         </div>
+        <span class="terminal-title">viento@vientofactory: ~</span>
       </div>
       <div class="terminal">
-        <div class="line command"><span class="prompt">viento@vientofactory:~$ </span><span class="command-text">whoami</span></div>
-        <div class="line output">VientoFactory</div>
-        <div class="line command">
-          <span class="prompt">viento@vientofactory:~$ </span><span class="command-text">echo "We make everything!"</span>
+        <div class="command-group">
+          <div class="line command">
+            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="whoami"></span>
+          </div>
+          <div class="line output">VientoFactory</div>
         </div>
-        <div class="line output">We make everything!</div>
-        <div class="line command"><span class="prompt">viento@vientofactory:~$ </span><span class="command-text">cat about.txt</span></div>
-        <div class="line output">
-          VientoFactory brings together experts from various fields to create new value through innovative ideas and technology.
+        <div class="command-group">
+          <div class="line command">
+            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text='echo "We make everything!"'></span>
+          </div>
+          <div class="line output">We make everything!</div>
         </div>
-        <div class="line command"><span class="prompt">viento@vientofactory:~$ </span><span class="command-text">ls features/</span></div>
-        <div class="line output">- Fast experimentation and execution: Quickly prototype ideas and improve based on market feedback.</div>
-        <div class="line output">- Collaboration-focused culture: Create greater value through cross-disciplinary collaboration.</div>
-        <div class="line output">- Problem-solving oriented: Clearly define user problems and find simple, elegant solutions.</div>
-        <div class="line command"><span class="prompt">viento@vientofactory:~$ </span><span class="command-text">ls projects/</span></div>
-        <div class="line output">FlowAuth: Open-source authentication system compliant with OAuth 2.0 standard (RFC6749)</div>
-        <div class="line output">Repository: <a href="https://github.com/vientofactory/FlowAuth">https://github.com/vientofactory/FlowAuth</a></div>
-        <div class="line output">Hayang: Smart management assistant for safer and more efficient Discord servers</div>
-        <div class="line output">Homepage: <a href="https://hayang.viento.me/">https://hayang.viento.me/</a></div>
-        <div class="line output">SecureGate [Archived]: Security invitation link management platform to block various attacks on Discord servers</div>
-        <div class="line output">
-          Web Archive:
-          <a href="https://web.archive.org/web/20240213162725/https://securegate.gg/"
-            >https://web.archive.org/web/20240213162725/https://securegate.gg/</a
-          >
+        <div class="command-group">
+          <div class="line command">
+            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="cat about.txt"></span>
+          </div>
+          <div class="line output">
+            VientoFactory brings together experts from various fields to create new value through innovative ideas and technology.
+          </div>
         </div>
-        <div class="line command"><span class="prompt">viento@vientofactory:~$ </span><span class="command-text">cat contact.txt</span></div>
-        <div class="line output">We welcome collaboration proposals, inquiries, and feedback.</div>
-        <div class="line output">Email: <a href="mailto:hello@viento.me">op@viento.me</a></div>
-        <div class="line output">GitHub: <a href="https://github.com/vientofactory">https://github.com/vientofactory</a></div>
+        <div class="command-group">
+          <div class="line command">
+            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="ls features/"></span>
+          </div>
+          <div class="line output">- Fast experimentation and execution: Quickly prototype ideas and improve based on market feedback.</div>
+          <div class="line output">- Collaboration-focused culture: Create greater value through cross-disciplinary collaboration.</div>
+          <div class="line output">- Problem-solving oriented: Clearly define user problems and find simple, elegant solutions.</div>
+        </div>
+        <div class="command-group">
+          <div class="line command">
+            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="ls projects/"></span>
+          </div>
+          <div class="line output">FlowAuth: Open-source authentication system compliant with OAuth 2.0 standard (RFC6749)</div>
+          <div class="line output">Repository: <a href="https://github.com/vientofactory/FlowAuth">https://github.com/vientofactory/FlowAuth</a></div>
+          <div class="line output">Hayang: Smart management assistant for safer and more efficient Discord servers</div>
+          <div class="line output">Homepage: <a href="https://hayang.viento.me/">https://hayang.viento.me/</a></div>
+          <div class="line output">
+            SecureGate [Archived]: Security invitation link management platform to block various attacks on Discord servers
+          </div>
+          <div class="line output">
+            Web Archive:
+            <a href="https://web.archive.org/web/20240213162725/https://securegate.gg/"
+              >https://web.archive.org/web/20240213162725/https://securegate.gg/</a
+            >
+          </div>
+        </div>
+        <div class="command-group">
+          <div class="line command">
+            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="cat contact.txt"></span>
+          </div>
+          <div class="line output">We welcome collaboration proposals, inquiries, and feedback.</div>
+          <div class="line output">Email: <a href="mailto:hello@viento.me">hello@viento.me</a></div>
+          <div class="line output">GitHub: <a href="https://github.com/vientofactory">https://github.com/vientofactory</a></div>
+        </div>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const commandGroups = document.querySelectorAll(".command-group");
+        let currentGroupIndex = 0;
+        let isTypingPaused = false;
+
+        function getTypingDelay(char) {
+          if (char === " ") return 80;
+          if ([".", ",", ":", ";"].includes(char)) return 200;
+          if (['"', "'"].includes(char)) return 150;
+          return 60 + Math.random() * 40;
+        }
+
+        function typeCommand(commandElement, text, callback) {
+          let currentCharIndex = 0;
+          const cursor = commandElement.querySelector(".cursor");
+
+          function type() {
+            if (currentCharIndex < text.length) {
+              if (cursor) cursor.remove();
+
+              const currentText = text.substring(0, currentCharIndex + 1);
+              commandElement.textContent = currentText;
+
+              const newCursor = document.createElement("span");
+              newCursor.className = "cursor";
+              newCursor.textContent = "█";
+              commandElement.appendChild(newCursor);
+
+              const delay = getTypingDelay(text[currentCharIndex]);
+              currentCharIndex++;
+              setTimeout(type, delay);
+            } else {
+              setTimeout(() => {
+                const finalCursor = commandElement.querySelector(".cursor");
+                if (finalCursor) finalCursor.remove();
+                callback();
+              }, 300);
+            }
+          }
+          type();
+        }
+
+        function showOutputs(outputs, callback) {
+          if (outputs.length === 0) {
+            callback();
+            return;
+          }
+
+          let outputIndex = 0;
+          function showNextOutput() {
+            if (outputIndex < outputs.length) {
+              const output = outputs[outputIndex];
+              output.classList.add("show");
+
+              output.scrollIntoView({ behavior: "smooth", block: "end" });
+
+              outputIndex++;
+              setTimeout(showNextOutput, 300 + Math.random() * 200);
+            } else {
+              setTimeout(callback, 800);
+            }
+          }
+
+          setTimeout(showNextOutput, 200);
+        }
+
+        function processGroup() {
+          if (currentGroupIndex < commandGroups.length) {
+            const group = commandGroups[currentGroupIndex];
+            const promptElement = group.querySelector(".prompt");
+            const commandElement = group.querySelector(".command-text");
+            const text = commandElement.getAttribute("data-text");
+            const outputs = group.querySelectorAll(".line.output");
+
+            promptElement.classList.remove("hidden");
+
+            const cursor = document.createElement("span");
+            cursor.className = "cursor";
+            cursor.textContent = "█";
+
+            commandElement.textContent = "";
+            commandElement.appendChild(cursor);
+
+            setTimeout(() => {
+              typeCommand(commandElement, text, () => {
+                const cursorElement = commandElement.querySelector(".cursor");
+                if (cursorElement) {
+                  cursorElement.remove();
+                }
+
+                setTimeout(() => {
+                  showOutputs(outputs, () => {
+                    currentGroupIndex++;
+                    setTimeout(processGroup, 1000);
+                  });
+                }, 300);
+              });
+            }, 200);
+          }
+        }
+
+        setTimeout(() => {
+          document.body.style.opacity = "1";
+          setTimeout(processGroup, 500);
+        }, 100);
+
+        document.addEventListener("keydown", function (e) {
+          if (e.code === "Space" || e.code === "Enter") {
+            if (currentGroupIndex < commandGroups.length) {
+              const currentGroup = commandGroups[currentGroupIndex];
+              const commandElement = currentGroup.querySelector(".command-text");
+              const text = commandElement.getAttribute("data-text");
+              const cursor = commandElement.querySelector(".cursor");
+
+              if (cursor) cursor.remove();
+              commandElement.textContent = text;
+
+              const outputs = currentGroup.querySelectorAll(".line.output");
+              outputs.forEach((output) => {
+                output.classList.add("show");
+              });
+            }
+            e.preventDefault();
+          }
+        });
+
+        document.addEventListener("touchstart", function (e) {
+          if (currentGroupIndex < commandGroups.length) {
+            const currentGroup = commandGroups[currentGroupIndex];
+            const commandElement = currentGroup.querySelector(".command-text");
+            const text = commandElement.getAttribute("data-text");
+            const cursor = commandElement.querySelector(".cursor");
+
+            if (cursor) cursor.remove();
+            commandElement.textContent = text;
+
+            const outputs = currentGroup.querySelectorAll(".line.output");
+            outputs.forEach((output) => {
+              output.classList.add("show");
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
