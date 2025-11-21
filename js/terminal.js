@@ -43,6 +43,30 @@ const OUTPUT_CONFIG = {
   MIN_OUTPUT_INDEX_FOR_SCROLL: 2,
 };
 
+const projects = [
+  {
+    name: "FlowAuth",
+    description: "Open-source authentication system compliant with OAuth 2.0 standard (RFC6749)",
+    link: 'Repository: <a href="https://github.com/vientofactory/FlowAuth">https://github.com/vientofactory/FlowAuth</a>',
+  },
+  {
+    name: "LawCast",
+    description:
+      "A public webhook platform that detects and notifies new amendments to the National Assembly Legislative Notice (pal.assembly.go.kr).",
+    link: 'Repository: <a href="https://github.com/vientofactory/LawCast">https://github.com/vientofactory/LawCast</a>',
+  },
+  {
+    name: "Hayang",
+    description: "Smart management assistant for safer and more efficient Discord servers",
+    link: 'Homepage: <a href="https://hayang.viento.me/">https://hayang.viento.me/</a>',
+  },
+  {
+    name: "SecureGate [Archived]",
+    description: "Security invitation link management platform to block various attacks on Discord servers",
+    link: 'Web Archive: <a href="https://web.archive.org/web/20240213162725/https://securegate.gg/">https://web.archive.org/web/20240213162725/https://securegate.gg/</a>',
+  },
+];
+
 document.addEventListener("DOMContentLoaded", function () {
   const commandGroups = document.querySelectorAll(".command-group");
   let currentGroupIndex = 0;
@@ -146,7 +170,22 @@ document.addEventListener("DOMContentLoaded", function () {
       const promptElement = group.querySelector(".prompt");
       const commandElement = group.querySelector(".command-text");
       const text = commandElement.getAttribute("data-text");
-      const outputs = group.querySelectorAll(".line.output");
+      let outputs = group.querySelectorAll(".line.output");
+
+      if (group.classList.contains("projects")) {
+        projects.forEach((project) => {
+          const nameOutput = document.createElement("div");
+          nameOutput.className = "line output";
+          nameOutput.innerHTML = `${project.name}: ${project.description}`;
+          group.appendChild(nameOutput);
+
+          const linkOutput = document.createElement("div");
+          linkOutput.className = "line output";
+          linkOutput.innerHTML = project.link;
+          group.appendChild(linkOutput);
+        });
+        outputs = group.querySelectorAll(".line.output");
+      }
 
       const terminalContainer = document.querySelector(".terminal");
       const groupRect = group.getBoundingClientRect();
@@ -221,7 +260,22 @@ document.addEventListener("DOMContentLoaded", function () {
         if (cursor) cursor.remove();
         commandElement.textContent = text;
 
-        const outputs = currentGroup.querySelectorAll(".line.output");
+        let outputs = currentGroup.querySelectorAll(".line.output");
+
+        if (currentGroup.classList.contains("projects")) {
+          projects.forEach((project) => {
+            const nameOutput = document.createElement("div");
+            nameOutput.className = "line output";
+            nameOutput.innerHTML = `${project.name}: ${project.description}`;
+            currentGroup.appendChild(nameOutput);
+
+            const linkOutput = document.createElement("div");
+            linkOutput.className = "line output";
+            linkOutput.innerHTML = project.link;
+            currentGroup.appendChild(linkOutput);
+          });
+          outputs = currentGroup.querySelectorAll(".line.output");
+        }
         outputs.forEach((output, index) => {
           setTimeout(() => {
             output.classList.add("show");
@@ -259,7 +313,22 @@ document.addEventListener("DOMContentLoaded", function () {
       if (cursor) cursor.remove();
       commandElement.textContent = text;
 
-      const outputs = currentGroup.querySelectorAll(".line.output");
+      let outputs = currentGroup.querySelectorAll(".line.output");
+
+      if (currentGroup.classList.contains("projects")) {
+        projects.forEach((project) => {
+          const nameOutput = document.createElement("div");
+          nameOutput.className = "line output";
+          nameOutput.innerHTML = `${project.name}: ${project.description}`;
+          currentGroup.appendChild(nameOutput);
+
+          const linkOutput = document.createElement("div");
+          linkOutput.className = "line output";
+          linkOutput.innerHTML = project.link;
+          currentGroup.appendChild(linkOutput);
+        });
+        outputs = currentGroup.querySelectorAll(".line.output");
+      }
       outputs.forEach((output, index) => {
         setTimeout(() => {
           output.classList.add("show");
