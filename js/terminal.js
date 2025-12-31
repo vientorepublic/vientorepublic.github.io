@@ -46,8 +46,8 @@ const OUTPUT_CONFIG = {
 const projects = [
   {
     name: "FlowAuth",
-    description: "Open-source authentication system compliant with OAuth 2.0 standard (RFC6749)",
-    link: 'Repository: <a href="https://github.com/vientofactory/FlowAuth">https://github.com/vientofactory/FlowAuth</a>',
+    description: "Authentication system compliant with OAuth 2.0 standard (RFC6749)",
+    link: 'Homepage: <a href="https://auth.viento.me/">https://auth.viento.me/</a>',
   },
   {
     name: "LawCast",
@@ -56,7 +56,7 @@ const projects = [
     link: 'Repository: <a href="https://github.com/vientofactory/LawCast">https://github.com/vientofactory/LawCast</a>',
   },
   {
-    name: "Hayang",
+    name: "Hayang [Discontinued]",
     description: "Smart management assistant for safer and more efficient Discord servers",
     link: 'Homepage: <a href="https://hayang.viento.me/">https://hayang.viento.me/</a>',
   },
