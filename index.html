@@ -1,72 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="VientoFactory introduction page" />
-    <meta property="og:title" content="VientoFactory" />
-    <meta property="og:description" content="VientoFactory - We make everything!" />
-    <meta property="og:url" content="https://viento.me" />
-    <title>VientoFactory</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/terminal.css" />
-    <script src="js/terminal.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doyeon Kim - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="terminal-window">
-      <div class="terminal-header">
-        <div class="window-controls">
-          <span class="control close"></span>
-          <span class="control minimize"></span>
-          <span class="control maximize"></span>
-        </div>
-        <span class="terminal-title">viento@vientofactory: ~</span>
+    <header>
+      <h1>Doyeon Kim</h1>
+      <p class="bio">Interested in Digital Security & Privacy | Full-stack Web Development</p>
+      <div class="tags" style="justify-content: center">
+        <a href="https://github.com/vientorepublic" target="_blank" class="tag">GitHub</a>
       </div>
-      <div class="terminal">
-        <div class="command-group">
-          <div class="line command">
-            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="whoami"></span>
-          </div>
-          <div class="line output">VientoFactory</div>
-        </div>
-        <div class="command-group">
-          <div class="line command">
-            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text='echo "We make everything!"'></span>
-          </div>
-          <div class="line output">We make everything!</div>
-        </div>
-        <div class="command-group">
-          <div class="line command">
-            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="cat about.txt"></span>
-          </div>
-          <div class="line output">
-            VientoFactory brings together experts from various fields to create new value through innovative ideas and technology.
-          </div>
-        </div>
-        <div class="command-group">
-          <div class="line command">
-            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="ls features/"></span>
-          </div>
-          <div class="line output">- Fast experimentation and execution: Quickly prototype ideas and improve based on market feedback.</div>
-          <div class="line output">- Collaboration-focused culture: Create greater value through cross-disciplinary collaboration.</div>
-          <div class="line output">- Problem-solving oriented: Clearly define user problems and find simple, elegant solutions.</div>
-        </div>
-        <div class="command-group projects">
-          <div class="line command">
-            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="ls projects/"></span>
-          </div>
-        </div>
-        <div class="command-group">
-          <div class="line command">
-            <span class="prompt hidden">viento@vientofactory:~$ </span><span class="command-text" data-text="cat contact.txt"></span>
-          </div>
-          <div class="line output">We welcome collaboration proposals, inquiries, and feedback.</div>
-          <div class="line output">Email: <a href="mailto:hello@viento.me">op@viento.me</a></div>
-          <div class="line output">GitHub: <a href="https://github.com/vientofactory">https://github.com/vientofactory</a></div>
-        </div>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p><strong>Education:</strong> Hannam University - Computer Science Engineering</p>
+      <p><strong>Interests:</strong></p>
+      <ul>
+        <li>Full-stack Web Development</li>
+        <li>Digital Security/Privacy</li>
+        <li>Austrian Economics & Libertarianism</li>
+        <li>Bitcoin</li>
+        <li>Indie Games</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Featured Projects</h2>
+
+      <div class="project-card">
+        <h3><a href="https://github.com/vientorepublic/hashguard" target="_blank">Hashguard</a></h3>
+        <p>Hash-Based Proof-of-Work CAPTCHA Issuance/Verification Server (TypeScript)</p>
       </div>
-    </div>
+
+      <div class="project-card">
+        <h3><a href="https://github.com/vientofactory/LawCast" target="_blank">LawCast</a></h3>
+        <p>A public webhook platform that detects and notifies new amendments to the National Assembly Legislative Notice</p>
+      </div>
+
+      <div class="project-card">
+        <h3><a href="https://github.com/vientorepublic/buffer-analysis-engine" target="_blank">Buffer Analysis Engine</a></h3>
+        <p>Lightweight, dependency-free buffer analysis engine for file content inspection (TypeScript)</p>
+      </div>
+
+      <div class="project-card">
+        <h3><a href="https://github.com/vientorepublic/discord-gateway" target="_blank">Discord Gateway</a></h3>
+        <p>Discord's WebSocket gateway protocol mock implementation (TypeScript)</p>
+      </div>
+
+      <div class="project-card">
+        <h3><a href="https://github.com/Axoneo/snowflake-id-node" target="_blank">Snowflake ID generator</a></h3>
+        <p>Snowflake ID Generator for Node.js (TypeScript)</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Web Development Work</h2>
+      <ul>
+        <li>
+          <strong><a href="https://miseskorea.org">Mises Institute Korea</a>:</strong> Web Development for a non-profit organization.
+        </li>
+        <li>
+          <strong><a href="https://auth.viento.me">FlowAuth</a>:</strong> Authentication system compliant with OAuth 2.0 standard (RFC6749).
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
